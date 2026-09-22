@@ -1,386 +1,1225 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mubashara Rehman</title>
+
+  <meta name="description"
+        content="Mubashara Rehman — AI researcher working in computer vision, medical imaging, deep learning and generative AI.">
+
+  <meta name="author" content="Mubashara Rehman">
+
+  <title>Mubashara Rehman | AI Researcher</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
+        rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="stylesheet.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   <style>
-  .theme-icon {
-    font-size: 20px;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 16px;
-    color: #333;
-    transition: color 0.3s ease;
-  }
-
-  body.dark-mode .theme-icon {
-    color: #f0f0f0;
-  }
-
-  body.dark-mode {
-    background-color: #121212;
-    color: #eee;
-  }
-
-  .dark-mode .navbar {
-    background-color: #1e1e1e;
-  }
-
-  .dark-mode .navbar a {
-    color: #eee;
-  }
-
-  .dark-mode .btn {
-    background-color: #1e1e1e !important;
-    color: #ffdddd !important;
-    border-color: #eee !important;
-  }
-
-  .dark-mode .publication-item {
-    background-color: #1e1e1e;
-    border-color: #333;
-  }
-
-  .dark-mode .publication-text p a {
-    color: #ffa500;
-  }
-
-  .dark-mode .btn:hover {
-    background-color: #eee !important;
-    color: #550000 !important;
-  }
-
-  .dark-mode .contact-icons a {
-    background-color: transparent;
-    border-color: #eee;
-    color: #f09228;
-  }
-     .theme-icon {
-  font-size: 20px;
-  margin-right: 10px;
-  cursor: pointer;
-  color: #444;
-  transition: color 0.3s;
-}
-
-body.dark-mode .theme-icon {
-  color: #f1c40f; /* Yellowish in dark mode */
-}
-</style>
-
- 
-
 </head>
+
+
 <body>
 
-  <!-- Navbar -->
-<nav class="navbar">
-  <a href="#home" class="active">Home</a>
-  <a href="#Publications">Publications</a>
-  <a href="#Achievements">Achievements</a>
-     <!-- Theme Toggle Switch -->
-    <!-- Theme Toggle with Icon -->
- <i id="theme-icon" class="fas fa-moon theme-icon" title="Toggle dark mode"></i>
- 
-</nav>
+  <!-- =========================================================
+       NAVIGATION
+  ========================================================== -->
 
-  
+  <header class="site-header">
 
-  <!-- Home Section -->
-  <section id="home" class="section-container home-grid">
-  <div class="home-text">
-<h1><strong>Mubashara</strong> Rehman</h1>
-    <!-- <p>I’m currently pursuing my PhD in Computer Science and Artificial Intelligence at the  <a href="https://machinelearning.uniud.it/">Machine Learning and Perceptron Lab</a>, <a href="https://www.uniud.it/en/uniud-international?set_language=en">University of Udine</a>, Italy under the supervision of <a href="https://users.dimi.uniud.it/~niki.martinel/">Dr Niki Martinel</a>.My research focused on low-level vision tasks, particularly image and video super-resolution. During my PhD, I developed an efficient implicit deep learning-based image super-resolution technique aimed at significantly reducing model parameters, FLOPs, and inference time while maintaining  model performance.</p> -->
-    <p>
-I am currently pursuing my Ph.D. in Computer Science and Artificial Intelligence at the 
-<a href="https://www.uniud.it/en/uniud-international?set_language=en">University of Udine</a>, Italy, 
-in collaboration with the 
-<a href="https://www.cro.it/">National Cancer Research Institute, CRO IRCCS</a>, supervised by <a href="https://users.dimi.uniud.it/~christian.micheloni/">Prof. Christian Micheloni</a>, and co-supervised by <a href="https://users.dimi.uniud.it/~niki.martinel/">Dr. Niki Martinel</a>.
-My research focuses on deep learning-based metal artifact reduction and domain transformation in CT imaging, 
-supported by the Italian Ministry of Health. 
-I hold a Master’s degree from <a href="https://en.tju.edu.cn/">Tianjin University</a>, China, and a Bachelor’s degree from Pakistan, 
-which laid the foundation for my expertise in computer vision and artificial intelligence. 
-My work aims to advance AI-driven CT reconstruction and enhancement, 
-bridging technical innovations with real-world healthcare impact.
-</p>
+    <nav class="navbar">
 
-    
-    
-  <p class="contact-icons">
-    <a href="mailto:rehman.mubashara@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-    <a href="data/CV_Mubashara_.pdf">CV</a>
-    <a href="https://scholar.google.com/citations?user=WYLi7mgAAAAJ&hl=en" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-    <a href="https://github.com/MubasharaRehman" title="Github"><i class="fab fa-github"></i></a>
-    
-    <a href="https://orcid.org/my-orcid?orcid=0009-0007-2935-0409" title="ORCID"><i class="fa-brands fa-orcid"></i></a>
-<a href="https://www.linkedin.com/in/mubashara-rehman/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-
-  </p>
-  </div>
-  <div class="home-image">
-    <img src="images/Mub_DP_github1.jpeg" alt="Profile Photo">
-  </div>
-</section>
-
-  <!-- Publications Section -->
- <section id="Publications" class="section-container">
- <h2>
-  <i class="fas fa-book"></i> Selected Publications
-</h2>
-
-
-
-  <!-- Publication 1 -->
-  <div class="publication-item hover-video">
-    <div class="video-container">
-      <video muted autoplay loop>
-        <source src="images/tip.mp4" type="video/mp4">
-      </video>
-      <img src="images/ReMAR_DS_ICIAP2025_.jpg" alt="TIP Paper Thumbnail">
-    </div>
-    <div class="publication-text">
-      <a href="https://arxiv.org/pdf/2506.19531">
-      <strong>ReMAR-DS: Metal Artifact Reduction and Domain Transformation from kVCT to MVCT</strong>
+      <a href="#home" class="nav-logo">
+        MR<span>.</span>
       </a>
-      <p>
-  <strong><u>Mubashara Rehman</u></strong>, Niki Martinel, Michele Avanzo, Riccardo Spizzo, Christian Micheloni        
-</p>
-          <p><em>23rd International Conference on Image Analysis and Processing (ICIAP), 2025</em></p>
-      <p>
-        <!-- Blind image super-resolution (SR) aims to recover high-resolution images without knowing the degradation. Existing methods often require ground-truth kernels and heavy networks. This work proposes a lightweight model (PL-IDENet) that implicitly learns degradations using a novel loss and a learnable Wiener filter. The method achieves better accuracy with significantly fewer parameters and computations.</p> -->
-       Metal artifacts in kVCT affect clinical accuracy. We propose <b>ReMAR-DS</b>, an encoder–decoder framework with enhanced feature recalibration for metal artifact reduction and kVCT→MVCT domain transformation. By emphasizing artifact-prone regions and preserving anatomical structures, our method generates high-quality MVCT-like reconstructions, improving radiotherapy planning while reducing repeated high-dose scans.</p>
-      <p>
 
-  <a href="#" class="btn" title="Will be made available soon">Code</a>
-  <a href="#" class="btn" title="Will be made available soon">Dataset</a>
-      <a href="data/default.bib" class="btn">Bibtex</a>
+      <div class="nav-links">
 
-      </p>
+        <a href="#home">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#achievements">Achievements</a>
+
+        <a href="data/CV_Mubashara_.pdf"
+           target="_blank"
+           rel="noopener">
+          CV
+        </a>
+
+        <button id="theme-toggle"
+                class="theme-toggle"
+                aria-label="Toggle dark mode"
+                title="Toggle dark mode">
+
+          <i class="fa-solid fa-moon"></i>
+
+        </button>
+
+      </div>
+
+      <button class="mobile-menu-toggle"
+              id="mobile-menu-toggle"
+              aria-label="Open navigation menu">
+
+        <i class="fa-solid fa-bars"></i>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- =========================================================
+         HERO / ABOUT
+    ========================================================== -->
+
+    <section id="home" class="hero section">
+
+      <div class="hero-content">
+
+        <div class="hero-text">
+
+          <p class="eyebrow">
+            Artificial Intelligence · Computer Vision · Medical Imaging
+          </p>
+
+          <h1>
+            Mubashara <span>Rehman</span>
+          </h1>
+
+          <p class="hero-intro">
+            AI researcher working at the intersection of
+            <strong>deep learning, computer vision, medical imaging,
+            and generative AI</strong>.
+          </p>
+
+          <p class="hero-description">
+
+            I recently submitted my PhD thesis in Computer Science and
+            Artificial Intelligence at the
+            <a href="https://www.uniud.it/en/uniud-international?set_language=en"
+               target="_blank"
+               rel="noopener">
+              University of Udine
+            </a>,
+            Italy.
+
+            My doctoral research focused on AI-driven medical image
+            analysis, with particular emphasis on metal artifact reduction,
+            CT reconstruction, and cross-modality domain transformation
+            for radiotherapy applications.
+
+          </p>
+
+
+          <!-- Social / Academic Links -->
+
+          <div class="profile-links">
+
+            <a href="mailto:rehman.mubashara@gmail.com"
+               class="profile-link">
+
+              <i class="fa-solid fa-envelope"></i>
+              <span>Email</span>
+
+            </a>
+
+
+            <a href="https://scholar.google.com/citations?user=WYLi7mgAAAAJ&hl=en"
+               target="_blank"
+               rel="noopener"
+               class="profile-link">
+
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span>Scholar</span>
+
+            </a>
+
+
+            <a href="https://github.com/MubasharaRehman"
+               target="_blank"
+               rel="noopener"
+               class="profile-link">
+
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+
+            </a>
+
+
+            <a href="https://orcid.org/0009-0007-2935-0409"
+               target="_blank"
+               rel="noopener"
+               class="profile-link">
+
+              <i class="fa-brands fa-orcid"></i>
+              <span>ORCID</span>
+
+            </a>
+
+
+            <a href="https://www.linkedin.com/in/mubashara-rehman/"
+               target="_blank"
+               rel="noopener"
+               class="profile-link">
+
+              <i class="fa-brands fa-linkedin"></i>
+              <span>LinkedIn</span>
+
+            </a>
+
+
+            <a href="data/CV_Mubashara_.pdf"
+               target="_blank"
+               rel="noopener"
+               class="profile-link profile-link-cv">
+
+              <i class="fa-regular fa-file-lines"></i>
+              <span>CV</span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- Profile image -->
+
+        <div class="hero-image-wrapper">
+
+          <div class="hero-image">
+
+            <img src="images/Mub_DP_github1.jpeg"
+                 alt="Mubashara Rehman">
+
+          </div>
+
+          <div class="image-caption">
+            AI · Computer Vision · Medical Imaging
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         RESEARCH
+    ========================================================== -->
+
+    <section id="research" class="section research-section">
+
+      <div class="section-heading">
+
+        <p class="section-label">
+          Research
+        </p>
+
+        <h2>
+          Areas of interest
+        </h2>
+
+        <p class="section-intro">
+          My research explores how modern AI methods can be developed
+          for challenging visual and medical imaging problems.
+        </p>
+
+      </div>
+
+
+      <div class="research-grid">
+
+
+        <!-- Research Card 1 -->
+
+        <article class="research-card">
+
+          <div class="research-icon">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+
+          <h3>
+            Medical Imaging
+          </h3>
+
+          <p>
+            AI methods for medical image reconstruction, enhancement,
+            artifact reduction and clinically motivated image analysis.
+          </p>
+
+          <div class="research-tags">
+
+            <span>CT</span>
+            <span>Reconstruction</span>
+            <span>Artifact Reduction</span>
+
+          </div>
+
+        </article>
+
+
+        <!-- Research Card 2 -->
+
+        <article class="research-card">
+
+          <div class="research-icon">
+            <i class="fa-solid fa-eye"></i>
+          </div>
+
+          <h3>
+            Computer Vision
+          </h3>
+
+          <p>
+            Deep learning approaches for image understanding,
+            enhancement, super-resolution and visual representation
+            learning.
+          </p>
+
+          <div class="research-tags">
+
+            <span>Deep Learning</span>
+            <span>Image Enhancement</span>
+            <span>Vision</span>
+
+          </div>
+
+        </article>
+
+
+        <!-- Research Card 3 -->
+
+        <article class="research-card">
+
+          <div class="research-icon">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+
+          <h3>
+            Generative AI
+          </h3>
+
+          <p>
+            Generative and image-to-image learning approaches for
+            cross-modality transformation and data-driven visual
+            synthesis.
+          </p>
+
+          <div class="research-tags">
+
+            <span>Generative Models</span>
+            <span>Image Translation</span>
+            <span>Domain Transformation</span>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         PUBLICATIONS
+    ========================================================== -->
+
+    <section id="publications" class="section publications-section">
+
+      <div class="section-heading">
+
+        <p class="section-label">
+          Research output
+        </p>
+
+        <h2>
+          Selected publications
+        </h2>
+
+        <p class="section-intro">
+          A selection of my work in computer vision, medical imaging,
+          responsible AI and machine learning.
+        </p>
+
+      </div>
+
+
+      <div class="publication-list">
+
+
+        <!-- =====================================================
+             PUBLICATION 1
+        ====================================================== -->
+
+        <article class="publication-card">
+
+          <div class="publication-media">
+
+            <div class="media-inner">
+
+              <video muted autoplay loop playsinline>
+
+                <source src="images/tip.mp4"
+                        type="video/mp4">
+
+              </video>
+
+              <img src="images/ReMAR_DS_ICIAP2025_.jpg"
+                   alt="ReMAR-DS publication">
+
+            </div>
+
+          </div>
+
+
+          <div class="publication-content">
+
+            <div class="publication-meta">
+              ICIAP · 2025
+            </div>
+
+            <h3>
+
+              <a href="https://arxiv.org/pdf/2506.19531"
+                 target="_blank"
+                 rel="noopener">
+
+                ReMAR-DS: Metal Artifact Reduction and Domain
+                Transformation from kVCT to MVCT
+
+              </a>
+
+            </h3>
+
+
+            <p class="authors">
+
+              <strong>Mubashara Rehman</strong>,
+              Niki Martinel, Michele Avanzo,
+              Riccardo Spizzo, Christian Micheloni
+
+            </p>
+
+
+            <p class="publication-description">
+
+              Metal artifacts in kVCT can affect image quality and
+              clinical interpretation. We propose ReMAR-DS, an
+              encoder–decoder framework for metal artifact reduction
+              and kVCT-to-MVCT domain transformation. The method
+              emphasizes artifact-prone regions while preserving
+              anatomical structures to generate high-quality
+              MVCT-like reconstructions for radiotherapy applications.
+
+            </p>
+
+
+            <div class="publication-links">
+
+              <a href="https://arxiv.org/pdf/2506.19531"
+                 target="_blank"
+                 rel="noopener">
+
+                Paper
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+              </a>
+
+              <a href="#"
+                 class="disabled-link"
+                 title="Code will be made available soon">
+
+                Code
+
+              </a>
+
+              <a href="#"
+                 class="disabled-link"
+                 title="Dataset will be made available soon">
+
+                Dataset
+
+              </a>
+
+              <a href="data/default.bib">
+
+                BibTeX
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- =====================================================
+             PUBLICATION 2
+        ====================================================== -->
+
+        <article class="publication-card">
+
+          <div class="publication-media">
+
+            <div class="media-inner">
+
+              <video muted autoplay loop playsinline>
+
+                <source src="images/responsible_ai.mp4"
+                        type="video/mp4">
+
+              </video>
+
+              <img src="images/ACM Sigir.png"
+                   alt="Responsible AI course report">
+
+            </div>
+
+          </div>
+
+
+          <div class="publication-content">
+
+            <div class="publication-meta">
+              ACM SIGIR Forum · 2025
+            </div>
+
+            <h3>
+
+              <a href="https://dl.acm.org/doi/abs/10.1145/3722449.3722456"
+                 target="_blank"
+                 rel="noopener">
+
+                Report on the Hands-On PhD Course on Responsible AI
+                from the Lens of an Information Access Researcher
+
+              </a>
+
+            </h3>
+
+
+            <p class="authors">
+
+              Damiano Spina, Kevin Roitero, Stefano Mizzaro,
+              Vincenzo Della Mea, Francesca Da Ros, Michael Soprano,
+              Hafsa Akebli, Alex Falcon, Mehdi Fasihi, Alessio Fiorin,
+              David La Barbera, Daniele Lizzio Bosco, Riccardo Lunardi,
+              Alberto Marturano, Zaka-Ud-Din Muhammad,
+              Francesco Nascimben, Moritz Nottebaum,
+              Massimiliano Pascoli, Mihai Horia Popescu,
+              Laura Rasotto, <strong>Mubashara Rehman</strong>,
+              Francesco Taverna, Biagio Tomasetig,
+              Alessandro Tremamunno
+
+            </p>
+
+
+            <p class="publication-description">
+
+              This report presents a four-day PhD-level course on
+              Responsible Artificial Intelligence held at the
+              University of Udine. The course explored topics including
+              positionality, fairness, diversity, ethics and
+              participatory research through case studies and
+              interactive activities.
+
+            </p>
+
+
+            <div class="publication-links">
+
+              <a href="https://dl.acm.org/doi/abs/10.1145/3722449.3722456"
+                 target="_blank"
+                 rel="noopener">
+
+                Paper
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+              </a>
+
+              <a href="data/default.bib">
+
+                BibTeX
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- =====================================================
+             PUBLICATION 3
+        ====================================================== -->
+
+        <article class="publication-card">
+
+          <div class="publication-media">
+
+            <div class="media-inner">
+
+              <video muted autoplay loop playsinline>
+
+                <source src="images/mar_dtn.mp4"
+                        type="video/mp4">
+
+              </video>
+
+              <img src="images/myUNet_architecture.png"
+                   alt="MAR-DTN publication">
+
+            </div>
+
+          </div>
+
+
+          <div class="publication-content">
+
+            <div class="publication-meta">
+              ICPR · 2024
+            </div>
+
+            <h3>
+
+              <a href="https://doi.org/10.1007/978-3-031-78195-7_10"
+                 target="_blank"
+                 rel="noopener">
+
+                MAR-DTN: Metal Artifact Reduction Using Domain
+                Transformation Network for Radiotherapy Planning
+
+              </a>
+
+            </h3>
+
+
+            <p class="authors">
+
+              Belén Serrano-Antón,
+              <strong>Mubashara Rehman</strong>,
+              Niki Martinel, Michele Avanzo,
+              Riccardo Spizzo, Giuseppe Fanetti,
+              Alberto P. Muñuzuri, Christian Micheloni
+
+            </p>
+
+
+            <p class="publication-description">
+
+              We propose a UNet-inspired domain transformation network
+              for generating artifact-free MVCT images from kVCT inputs.
+              The approach combines information from both modalities
+              to reduce metallic artifacts while improving tissue
+              representation for radiotherapy treatment planning.
+
+            </p>
+
+
+            <div class="publication-links">
+
+              <a href="https://doi.org/10.1007/978-3-031-78195-7_10"
+                 target="_blank"
+                 rel="noopener">
+
+                Paper
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+              </a>
+
+              <a href="#"
+                 class="disabled-link"
+                 title="Code will be made available soon">
+
+                Code
+
+              </a>
+
+              <a href="#"
+                 class="disabled-link"
+                 title="Dataset will be made available soon">
+
+                Dataset
+
+              </a>
+
+              <a href="data/default.bib">
+
+                BibTeX
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- =====================================================
+             PUBLICATION 4
+        ====================================================== -->
+
+        <article class="publication-card">
+
+          <div class="publication-media">
+
+            <div class="media-inner">
+
+              <video muted autoplay loop playsinline>
+
+                <source src="images/optical_flow.mp4"
+                        type="video/mp4">
+
+              </video>
+
+              <img src="images/ICSCA2021.png"
+                   alt="Optical flow publication">
+
+            </div>
+
+          </div>
+
+
+          <div class="publication-content">
+
+            <div class="publication-meta">
+              ICSCA · 2021
+            </div>
+
+            <h3>
+
+              <a href="https://doi.org/10.1145/3457784.3457813"
+                 target="_blank"
+                 rel="noopener">
+
+                A Fast and Robust Embedded Optical Flow Unit
+                on Motion Estimation
+
+              </a>
+
+            </h3>
+
+
+            <p class="authors">
+
+              <strong>Mubashara Rehman</strong>,
+              Chung Ming Own, Ziqi Li
+
+            </p>
+
+
+            <p class="publication-description">
+
+              We propose a fast and robust optical flow estimation
+              unit that enhances FlowNetC using correlation-based
+              feature matching, an Extended Sobel operator and
+              feature-fusion strategies. Experiments on MPI Sintel
+              and Flying Chairs demonstrate competitive accuracy,
+              convergence and robustness.
+
+            </p>
+
+
+            <div class="publication-links">
+
+              <a href="https://doi.org/10.1145/3457784.3457813"
+                 target="_blank"
+                 rel="noopener">
+
+                Paper
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+              </a>
+
+              <a href="#"
+                 class="disabled-link"
+                 title="Code will be made available soon">
+
+                Code
+
+              </a>
+
+              <a href="#"
+                 class="disabled-link"
+                 title="Dataset will be made available soon">
+
+                Dataset
+
+              </a>
+
+              <a href="data/default.bib">
+
+                BibTeX
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         ACHIEVEMENTS + REVIEWING
+    ========================================================== -->
+
+    <section id="achievements" class="section">
+
+      <div class="section-heading">
+
+        <p class="section-label">
+          Academic activities
+        </p>
+
+        <h2>
+          Achievements & service
+        </h2>
+
+      </div>
+
+
+      <div class="academic-grid">
+
+
+        <!-- Achievements -->
+
+        <div class="academic-column">
+
+          <div class="academic-title">
+
+            <div class="academic-icon">
+              <i class="fa-solid fa-award"></i>
+            </div>
+
+            <h3>
+              Achievements
+            </h3>
+
+          </div>
+
+
+          <div class="timeline">
+
+
+            <div class="timeline-item">
+
+              <div class="timeline-marker"></div>
+
+              <div>
+
+                <h4>
+                  PhD Fellowship Award
+                </h4>
+
+                <p>
+                  Fully funded doctoral fellowship supported by the
+                  Italian Ministry of Health in collaboration with
+                  the National Cancer Research Institute,
+                  CRO IRCCS.
+                </p>
+
+                <span>
+                  2023
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+              <div class="timeline-marker"></div>
+
+              <div>
+
+                <h4>
+                  Tianjin University Scholarship
+                </h4>
+
+                <p>
+                  International Student Scholarship awarded by
+                  Tianjin University for academic excellence.
+                </p>
+
+                <span>
+                  2017
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+              <div class="timeline-marker"></div>
+
+              <div>
+
+                <h4>
+                  Prime Minister's Laptop Award
+                </h4>
+
+                <p>
+                  Recipient of the Prime Minister's Best Student
+                  Laptop Scheme, Government of Pakistan.
+                </p>
+
+                <span>
+                  2015
+                </span>
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Reviewing -->
+
+        <div class="academic-column">
+
+          <div class="academic-title">
+
+            <div class="academic-icon">
+              <i class="fa-solid fa-clipboard-check"></i>
+            </div>
+
+            <h3>
+              Review activities
+            </h3>
+
+          </div>
+
+
+          <div class="review-box">
+
+            <p class="review-label">
+              Conferences
+            </p>
+
+            <div class="review-list">
+
+              <span>WACV 2025</span>
+              <span>ICIAP 2025</span>
+              <span>ICIAP 2023</span>
+
+            </div>
+
+          </div>
+
+          <p class="review-note">
+            Peer-review activities in computer vision and
+            image analysis research.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+  </main>
+
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
+  <footer class="footer">
+
+    <div class="footer-content">
+
+      <div>
+
+        <strong>
+          Mubashara Rehman
+        </strong>
+
+        <p>
+          AI · Computer Vision · Medical Imaging
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="mailto:rehman.mubashara@gmail.com"
+           aria-label="Email">
+
+          <i class="fa-solid fa-envelope"></i>
+
+        </a>
+
+
+        <a href="https://scholar.google.com/citations?user=WYLi7mgAAAAJ&hl=en"
+           target="_blank"
+           rel="noopener"
+           aria-label="Google Scholar">
+
+          <i class="fa-solid fa-graduation-cap"></i>
+
+        </a>
+
+
+        <a href="https://github.com/MubasharaRehman"
+           target="_blank"
+           rel="noopener"
+           aria-label="GitHub">
+
+          <i class="fa-brands fa-github"></i>
+
+        </a>
+
+
+        <a href="https://orcid.org/0009-0007-2935-0409"
+           target="_blank"
+           rel="noopener"
+           aria-label="ORCID">
+
+          <i class="fa-brands fa-orcid"></i>
+
+        </a>
+
+
+        <a href="https://www.linkedin.com/in/mubashara-rehman/"
+           target="_blank"
+           rel="noopener"
+           aria-label="LinkedIn">
+
+          <i class="fa-brands fa-linkedin"></i>
+
+        </a>
+
+      </div>
+
     </div>
-  </div>
 
 
+    <div class="footer-bottom">
 
-   <!-- Publication 2 -->
-<div class="publication-item hover-video">
-  <div class="video-container">
-    <video muted autoplay loop>
-      <source src="images/responsible_ai.mp4" type="video/mp4">
-    </video>
-    <img src="images/ACM Sigir.png" alt="Responsible AI Course Report Thumbnail">
-  </div>
-  <div class="publication-text">
-    <a href="https://dl.acm.org/doi/abs/10.1145/3722449.3722456">
-      <strong>Report on the Hands-On PhD Course on Responsible AI from the Lens of an Information Access Researcher</strong>
-    </a>
-    <p>
-      Damiano Spina, Kevin Roitero, Stefano Mizzaro, Vincenzo Della Mea, Francesca Da Ros, 
-      Michael Soprano, Hafsa Akebli, Alex Falcon, Mehdi Fasihi, Alessio Fiorin, David La Barbera, 
-      Daniele Lizzio Bosco, Riccardo Lunardi, Alberto Marturano, Zaka-Ud-Din Muhammad, 
-      Francesco Nascimben, Moritz Nottebaum, Massimiliano Pascoli, Mihai Horia Popescu, 
-      Laura Rasotto, <strong><u>Mubashara Rehman</u></strong>, Francesco Taverna, Biagio Tomasetig, Alessandro Tremamunno
-    </p>
-    <p><em>ACM SIGIR Forum, Vol. 58, No. 2, pp. 1–61, March 2025</em></p>
-    <p>
-      This paper presents a four-day PhD-level course on Responsible Artificial Intelligence, held at the University of Udine. 
-      Through case studies and interactive activities, the course explored concepts such as positionality, fairness, diversity, 
-      ethics, and participatory research in the context of information retrieval. With 23 participants from diverse academic 
-      backgrounds, the course highlighted practical ways to integrate responsible AI into research and education.
-    </p>
-    <p>
-      <a href="data/default.bib" class="btn">Bibtex</a>
-    </p>
-  </div>
-</div>
+      © 2026 Mubashara Rehman
 
-
-
-<!-- Publication 3 -->
-<div class="publication-item hover-video">
-  <div class="video-container">
-    <video muted autoplay loop>
-      <source src="images/mar_dtn.mp4" type="video/mp4">
-    </video>
-    <img src="images/myUNet_architecture.png" alt="MAR-DTN Paper Thumbnail">
-  </div>
-  <div class="publication-text">
-    <a href="https://doi.org/10.1007/978-3-031-78195-7_10">
-      <strong>MAR-DTN: Metal Artifact Reduction Using Domain Transformation Network for Radiotherapy Planning</strong>
-    </a>
-    <p>
-      Belén Serrano-Antón, <strong><u>Mubashara Rehman</u></strong>, Niki Martinel, Michele Avanzo, 
-      Riccardo Spizzo, Giuseppe Fanetti, Alberto P. Muñuzuri, Christian Micheloni
-    </p>
-    <p><em>Pattern Recognition (ICPR 2024), Lecture Notes in Computer Science, vol. 15311, Springer, Cham, December 2024</em></p>
-    <p>
-      This study addresses the limitations of kVCT scans for radiotherapy planning, where metallic implants 
-      often cause severe artifacts. We propose a UNet-inspired domain transformation network (MAR-DTN) to 
-      generate artifact-free MVCT images from kVCT inputs, leveraging the strengths of both modalities. 
-      The method achieves PSNR of 30.02 dB across entire patient volumes and 27.47 dB in artifact-affected 
-      regions, enabling enhanced tissue contrast and more precise radiotherapy treatment calibration.
-    </p>
-    <p>
-      <a href="#" class="btn" title="Will be made available soon">Code</a>
-      <a href="#" class="btn" title="Will be made available soon">Dataset</a>
-      <a href="data/default.bib" class="btn">Bibtex</a>
-    </p>
-  </div>
-</div>
-
-
-   
-
-<!-- Publication 4 -->
-<div class="publication-item hover-video">
-  <div class="video-container">
-    <video muted autoplay loop>
-      <source src="images/optical_flow.mp4" type="video/mp4">
-    </video>
-    <img src="images/ICSCA2021.png" alt="Optical Flow Paper Thumbnail">
-  </div>
-  <div class="publication-text">
-    <a href="https://doi.org/10.1145/3457784.3457813">
-      <strong>A Fast and Robust Embedded Optical Flow Unit on Motion Estimation</strong>
-    </a>
-    <p>
-      <strong><u>Mubashara Rehman</u></strong>, Chung Ming Own, Ziqi Li
-    </p>
-    <p><em>Proceedings of the 2021 10th International Conference on Software and Computer Applications (ICSCA '21), Kuala Lumpur, Malaysia, pp. 180–185, ACM, 2021</em></p>
-    <p>
-      We propose a fast and robust optical flow estimation unit (FUOF) that enhances FlowNetC with correlation-based 
-      feature matching, an Extended Sobel operator for efficient spatial extraction, and two fusion strategies 
-      (FUOF-Sum and FUOF-Concat). Experiments on MPI Sintel and Flying Chairs datasets demonstrate competitive 
-      accuracy, faster convergence, and robustness compared to existing methods.
-    </p>
-    <p>
-      <a href="#" class="btn" title="Will be made available soon">Code</a>
-      <a href="#" class="btn" title="Will be made available soon">Dataset</a>
-      <a href="data/default.bib" class="btn">Bibtex</a>
-    </p>
-  </div>
-</div>
-
-
-
-</section>
-
-  <!-- Achievements & Review Activities Section -->
-<section class="section-container">
-  <div class="achievements-review">
-
-    <!-- Achievements -->
-    <div class="achievements">
-      <h2 id="Achievements">
-        <i class="fas fa-trophy"></i> Achievements
-      </h2>
-      <ul>
-        <li>PhD Fellowship Award – Fully funded doctoral fellowship granted by the Italian Ministry of Health-2023, in collaboration with the National Cancer Research Institute, CRO IRCCS.</li>
-        <li>Master’s Scholarship – Tianjin University International Student Scholarship-2017,awarded for academic excellence.</li>
-        <li> Laptop Award – Recipient under the Prime Minister’s Best Student Laptop Scheme 2015, Government of Pakistan.</li>
-      </ul>
     </div>
 
-    <!-- Review Activities -->
-    <div class="review-activities">
-      <h2>
-        <i class="fas fa-clipboard-check"></i> Review Activities
-      </h2>
-      <ul>
-        <li><strong>Conferences:</strong> WACV 2025, ICIAP 2025, ICIAP 2023</li>
-        <!-- <li><strong>Journals:</strong> Pattern Recognition, Image and Vision Computing</li> -->
-      </ul>
-    </div>
+  </footer>
 
-  </div>
-</section>
 
-<!--
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const themeIcon = document.getElementById('theme-icon');
-  const navbar = document.querySelector('.navbar');
-  const body = document.body;
 
-  // Load saved theme
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
-    body.classList.add('dark-mode');
-    themeIcon.classList.replace('fa-moon', 'fa-sun');
-    themeIcon.title = "Toggle light mode";
-  }
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================== -->
 
-  // Dark mode toggle
-  themeIcon.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
+  <script>
 
-    if (body.classList.contains('dark-mode')) {
-      themeIcon.classList.replace('fa-moon', 'fa-sun');
-      themeIcon.title = "Toggle light mode";
-      localStorage.setItem('theme', 'dark');
-    } else {
-      themeIcon.classList.replace('fa-sun', 'fa-moon');
-      themeIcon.title = "Toggle dark mode";
-      localStorage.setItem('theme', 'light');
-    }
-  });
+    document.addEventListener("DOMContentLoaded", function () {
 
-  // Navbar scroll effect
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
-});
-</script>
+      /* -------------------------------------------------------
+         DARK MODE
+      -------------------------------------------------------- */
 
--->
-    <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const navbar = document.querySelector('.navbar');
-    const themeIcon = document.getElementById('theme-icon');
-    const body = document.body;
+      const themeToggle =
+        document.getElementById("theme-toggle");
 
-    // Load saved theme
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      body.classList.add('dark-mode');
-      themeIcon.classList.replace('fa-moon', 'fa-sun');
-      themeIcon.title = "Toggle light mode";
-    }
+      const themeIcon =
+        themeToggle.querySelector("i");
 
-    // Dark mode toggle
-    themeIcon.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      if (body.classList.contains('dark-mode')) {
-        themeIcon.classList.replace('fa-moon', 'fa-sun');
-        themeIcon.title = "Toggle light mode";
-        localStorage.setItem('theme', 'dark');
-      } else {
-        themeIcon.classList.replace('fa-sun', 'fa-moon');
-        themeIcon.title = "Toggle dark mode";
-        localStorage.setItem('theme', 'light');
+      const savedTheme =
+        localStorage.getItem("theme");
+
+
+      if (savedTheme === "dark") {
+
+        document.body.classList.add("dark-mode");
+
+        themeIcon.classList.remove("fa-moon");
+        themeIcon.classList.add("fa-sun");
+
       }
+
+
+      themeToggle.addEventListener("click", function () {
+
+        document.body.classList.toggle("dark-mode");
+
+
+        const isDark =
+          document.body.classList.contains("dark-mode");
+
+
+        if (isDark) {
+
+          themeIcon.classList.remove("fa-moon");
+          themeIcon.classList.add("fa-sun");
+
+          localStorage.setItem("theme", "dark");
+
+        } else {
+
+          themeIcon.classList.remove("fa-sun");
+          themeIcon.classList.add("fa-moon");
+
+          localStorage.setItem("theme", "light");
+
+        }
+
+      });
+
+
+
+      /* -------------------------------------------------------
+         MOBILE MENU
+      -------------------------------------------------------- */
+
+      const mobileToggle =
+        document.getElementById("mobile-menu-toggle");
+
+      const navLinks =
+        document.querySelector(".nav-links");
+
+
+      mobileToggle.addEventListener("click", function () {
+
+        navLinks.classList.toggle("mobile-open");
+
+        const icon =
+          mobileToggle.querySelector("i");
+
+
+        if (navLinks.classList.contains("mobile-open")) {
+
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-xmark");
+
+        } else {
+
+          icon.classList.remove("fa-xmark");
+          icon.classList.add("fa-bars");
+
+        }
+
+      });
+
+
+      /* Close mobile menu after clicking a link */
+
+      document.querySelectorAll(".nav-links a")
+        .forEach(function (link) {
+
+          link.addEventListener("click", function () {
+
+            navLinks.classList.remove("mobile-open");
+
+            const icon =
+              mobileToggle.querySelector("i");
+
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+
+          });
+
+        });
+
+
+
+      /* -------------------------------------------------------
+         NAVBAR SCROLL STATE
+      -------------------------------------------------------- */
+
+      const header =
+        document.querySelector(".site-header");
+
+
+      window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 20) {
+
+          header.classList.add("scrolled");
+
+        } else {
+
+          header.classList.remove("scrolled");
+
+        }
+
+      });
+
+
+
+      /* -------------------------------------------------------
+         VIDEO / IMAGE HOVER
+      -------------------------------------------------------- */
+
+      document.querySelectorAll(".publication-media")
+        .forEach(function (media) {
+
+          const video =
+            media.querySelector("video");
+
+          if (!video) return;
+
+
+          media.addEventListener("mouseenter", function () {
+
+            video.play().catch(function () {});
+
+          });
+
+
+          media.addEventListener("mouseleave", function () {
+
+            video.pause();
+
+          });
+
+        });
+
+
     });
 
-    // Navbar scroll effect
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
-  });
   </script>
+
 
 </body>
 </html>
-
