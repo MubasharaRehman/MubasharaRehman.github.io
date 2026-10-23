@@ -111,6 +111,32 @@
   .plinks a{font-size:12px;font-weight:600;border:1px solid var(--line);border-radius:6px;padding:2px 9px}
   .plinks a:hover{border-color:var(--accent);text-decoration:none}
   .plinks a.cert{background:var(--accent-soft);border-color:var(--accent-soft)}
+  .plinks button.bib{all:unset;cursor:pointer;font-size:12px;font-weight:600;color:var(--accent);border:1px solid var(--line);border-radius:6px;padding:2px 9px}
+  .plinks button.bib:hover,.plinks button.bib[aria-expanded="true"]{border-color:var(--accent)}
+  .bibbox{position:relative;margin-top:8px;background:var(--bg);border:1px solid var(--line);border-radius:8px}
+  .bibbox pre{font:12px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--text);padding:12px 14px;padding-right:84px;overflow-x:auto;white-space:pre}
+  .bibbox .copy{all:unset;cursor:pointer;position:absolute;top:8px;right:8px;font-size:12px;font-weight:600;background:var(--accent);color:#fff;padding:3px 10px;border-radius:6px}
+  @media (prefers-color-scheme: dark){ .bibbox .copy{color:#062322} }
+
+  /* News (compact) */
+  .duo{display:grid;grid-template-columns:1.75fr 1fr;gap:16px}
+  .duo section{display:flex;flex-direction:column}
+  .duo .card{flex:1}
+  #about p.lead{font-size:14px;line-height:1.6}
+  #about .collab{font-size:12.5px}
+  .newscard{padding:14px 16px}
+  .news{list-style:none;font-size:12.5px;line-height:1.45;color:var(--muted)}
+  .news li{display:flex;gap:10px;padding:2px 0}
+  .news time{flex:none;width:54px;font:600 11.5px/1.6 "Space Grotesk",sans-serif;color:var(--accent);white-space:nowrap}
+  .news b{color:var(--text);font-weight:600}
+  .newscard{display:flex;flex-direction:column}
+  .newscard > .news{flex:1}
+  .news-more{margin-top:8px;padding-top:6px;border-top:1px dashed var(--line)}
+  .news-more summary{font-size:12px;margin-top:0}
+  .news-more summary::before{content:none}
+  details.news-more summary::after{content:" +"}
+  details.news-more[open] summary::after{content:" −"}
+  details.news-more[open] summary{margin-bottom:4px}
 
   /* Skills */
   .skillrow{display:grid;grid-template-columns:150px 1fr;gap:10px;padding:10px 0;border-bottom:1px dashed var(--line)}
@@ -126,6 +152,28 @@
   .item b{display:block;font-size:14px;line-height:1.35}
   .item small{display:block;margin-top:2px;color:var(--muted);font-size:12.5px;line-height:1.45}
   .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .cbtn{display:inline-block;margin-top:6px;font-size:11.5px;font-weight:600;background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent-soft);border-radius:6px;padding:1px 8px}
+  .cbtn:hover{border-color:var(--accent);text-decoration:none}
+  .clist{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .crow{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+  .crow b{display:block;font-size:13px;line-height:1.35}
+  .crow small{display:block;font-size:11.5px;color:var(--muted);margin-top:2px;line-height:1.4}
+  .crow .cbtn{flex:none;margin-top:0}
+  .specs{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:start}
+  .spec{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:11px 13px}
+  .spec-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .spec-head b{display:block;font-size:13.5px;line-height:1.35}
+  .spec-head small{display:block;font-size:11.5px;color:var(--muted);margin-top:2px;line-height:1.4}
+  .spec-head .cbtn{flex:none;margin-top:0}
+  .spec ul{list-style:none;margin-top:8px;padding-top:6px;border-top:1px dashed var(--line)}
+  .spec li{display:flex;justify-content:space-between;gap:10px;font-size:12px;padding:2px 0}
+  .spec li i{color:var(--muted);font-style:normal}
+  .spec li a{flex:none;font-size:11.5px;font-weight:600}
+  .spec.tall2{grid-row:span 2}
+  .spec-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .spec-btns .cbtn{margin-top:0}
+  .cmore{margin-top:10px}
+  .cmore .clist{margin-top:8px}
 
   .interests{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
   .int{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px}
@@ -197,6 +245,8 @@
     .stat b{font-size:22px}
     .skillrow{grid-template-columns:1fr;gap:6px}
     .pub .yr{width:44px;height:44px;font-size:12px}
+    .duo{grid-template-columns:1fr;gap:0}
+    .clist,.specs{grid-template-columns:1fr}
   }
 </style>
 </head>
@@ -207,6 +257,7 @@
     <a class="logo" href="#top">Mubashara<span>.</span></a>
     <div class="links">
       <a href="#about">About</a>
+      <a href="#news">News</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
       <a href="#posters">Posters</a>
@@ -238,6 +289,7 @@
     </div>
   </header>
 
+<div class="duo">
   <section id="about">
     <h2>About</h2>
     <div class="card">
@@ -245,6 +297,26 @@
       <p class="collab">Collaborations with <b>IRCCS CRO Aviano</b> (Italy) · <b>Leiden University Medical Center</b> (Netherlands) · <b>Philips Research</b> · <b>Universidad de Santiago de Compostela</b> (Spain)</p>
     </div>
   </section>
+
+  <section id="news">
+    <h2>News</h2>
+    <div class="card newscard">
+    <ul class="news">
+      <li><time>Sep 2026</time><span>Attended <b>ICTCS 2026</b>, Udine</span></li>
+      <li><time>Aug 2026</time><span><b>PhD thesis submitted</b>, University of Udine</span></li>
+      <li><time>2026</time><span><b>H3D-MarNet</b> presented at <b>ICPR 2026</b>, Lyon</span></li>
+      <li><time>2026</time><span><b>ReFineMRI</b> submitted to IEEE TCI</span></li>
+      <li><time>Jan 2026</time><span>Visiting researcher at <b>LUMC</b> with Philips Research</span></li>
+      <li><time>2025</time><span><b>ReMAR-DS</b> presented at <b>ICIAP 2025</b>, Rome</span></li>
+    </ul>
+    <details class="news-more"><summary>More</summary><ul class="news">
+      <li><time>Jul 2025</time><span><b>RISE-MICCAI</b> Summer School</span></li>
+      <li><time>2024</time><span><b>MAR-DTN</b> presented at <b>ICPR 2024</b></span></li>
+      <li><time>Aug 2024</time><span><b>ICVSS 2024</b> Summer School</span></li>
+    </ul></details>
+    </div>
+  </section>
+</div>
 
   <section id="research">
     <h2>Research interests</h2>
@@ -298,25 +370,25 @@
       <h3><a class="plink" href="https://arxiv.org/abs/2605.12252" target="_blank" rel="noopener">H3D-MarNet: Wavelet-Guided Dual-Path Learning for Metal Artifact Suppression and CT Modality Transformation for Radiotherapy Workflows <span aria-hidden="true">↗</span></a></h3>
       <p class="au"><b>M. Rehman</b>, N. Martinel, M. Avanzo, R. Spizzo, C. Micheloni</p>
       <p class="ve">Pattern Recognition – ICPR 2026, LNCS vol. 16821, Springer <span class="first">First author</span></p>
-      <p class="plinks"><a href="https://arxiv.org/abs/2605.12252" target="_blank" rel="noopener">arXiv</a> <a href="https://arxiv.org/pdf/2605.12252" target="_blank" rel="noopener">PDF</a> <a class="cert" href="certificates/icpr2026.pdf" target="_blank" rel="noopener">🏅 Certificate of publication</a></p>
+      <p class="plinks"><a href="https://arxiv.org/abs/2605.12252" target="_blank" rel="noopener">arXiv</a> <a href="https://arxiv.org/pdf/2605.12252" target="_blank" rel="noopener">PDF</a> <button class="bib" data-bib="icpr2026" aria-expanded="false">❝ Cite (BibTeX)</button> <a class="cert" href="certificates/icpr2026.pdf" target="_blank" rel="noopener">🏅 Certificate of publication</a></p>
     </div></div>
     <div class="pub"><div class="yr">ICIAP<br>2025</div><div>
       <h3><a class="plink" href="https://doi.org/10.1007/978-3-032-10192-1_18" target="_blank" rel="noopener">ReMAR-DS: Recalibrated Feature Learning for Metal Artifact Reduction and CT Domain Transformation <span aria-hidden="true">↗</span></a></h3>
       <p class="au"><b>M. Rehman</b>, N. Martinel, M. Avanzo, R. Spizzo, C. Micheloni</p>
       <p class="ve">23rd International Conference on Image Analysis and Processing <span class="first">First author</span></p>
-      <p class="plinks"><a href="https://doi.org/10.1007/978-3-032-10192-1_18" target="_blank" rel="noopener">Springer</a> <a href="https://arxiv.org/abs/2506.19531" target="_blank" rel="noopener">arXiv</a> <a href="https://arxiv.org/pdf/2506.19531" target="_blank" rel="noopener">PDF</a> <a class="cert" href="certificates/iciap2025.pdf" target="_blank" rel="noopener">🏅 Certificate of publication</a></p>
+      <p class="plinks"><a href="https://doi.org/10.1007/978-3-032-10192-1_18" target="_blank" rel="noopener">Springer</a> <a href="https://arxiv.org/abs/2506.19531" target="_blank" rel="noopener">arXiv</a> <a href="https://arxiv.org/pdf/2506.19531" target="_blank" rel="noopener">PDF</a> <button class="bib" data-bib="iciap2025" aria-expanded="false">❝ Cite (BibTeX)</button> <a class="cert" href="certificates/iciap2025.pdf" target="_blank" rel="noopener">🏅 Certificate of publication</a></p>
     </div></div>
     <div class="pub"><div class="yr">ICPR<br>2024</div><div>
       <h3><a class="plink" href="https://doi.org/10.1007/978-3-031-78195-7_10" target="_blank" rel="noopener">MAR-DTN: Metal Artifact Reduction using Domain Transformation Network for Radiotherapy Planning <span aria-hidden="true">↗</span></a></h3>
       <p class="au"><b>M. Rehman</b>, N. Martinel, M. Avanzo, R. Spizzo, C. Micheloni</p>
       <p class="ve">27th International Conference on Pattern Recognition <span class="first">First author</span></p>
-      <p class="plinks"><a href="https://doi.org/10.1007/978-3-031-78195-7_10" target="_blank" rel="noopener">Springer</a> <a href="https://arxiv.org/abs/2409.15155" target="_blank" rel="noopener">arXiv</a> <a href="https://arxiv.org/pdf/2409.15155" target="_blank" rel="noopener">PDF</a> <a class="cert" href="certificates/icpr2024.pdf" target="_blank" rel="noopener">🏅 Certificate of publication</a></p>
+      <p class="plinks"><a href="https://doi.org/10.1007/978-3-031-78195-7_10" target="_blank" rel="noopener">Springer</a> <a href="https://arxiv.org/abs/2409.15155" target="_blank" rel="noopener">arXiv</a> <a href="https://arxiv.org/pdf/2409.15155" target="_blank" rel="noopener">PDF</a> <button class="bib" data-bib="icpr2024" aria-expanded="false">❝ Cite (BibTeX)</button> <a class="cert" href="certificates/icpr2024.pdf" target="_blank" rel="noopener">🏅 Certificate of publication</a></p>
     </div></div>
     <div class="pub"><div class="yr">ICSCA<br>2021</div><div>
       <h3><a class="plink" href="https://dl.acm.org/doi/abs/10.1145/3457784.3457813" target="_blank" rel="noopener">A Fast and Robust Embedded Optical Flow Unit on Motion Estimation <span aria-hidden="true">↗</span></a></h3>
       <p class="au"><b>M. Rehman</b>, C.-M. Own, Z. Li</p>
       <p class="ve">Proceedings of the 2021 10th International Conference on Software and Computer Applications (ICSCA), ACM, pp. 180–185 <span class="first">First author</span></p>
-      <p class="plinks"><a href="https://dl.acm.org/doi/abs/10.1145/3457784.3457813" target="_blank" rel="noopener">ACM</a> <a href="https://dl.acm.org/doi/pdf/10.1145/3457784.3457813" target="_blank" rel="noopener">PDF</a> <a class="cert" href="certificates/icsca2021.pdf" target="_blank" rel="noopener">🏅 Certificate of publication</a></p>
+      <p class="plinks"><a href="https://dl.acm.org/doi/abs/10.1145/3457784.3457813" target="_blank" rel="noopener">ACM</a> <a href="https://dl.acm.org/doi/pdf/10.1145/3457784.3457813" target="_blank" rel="noopener">PDF</a> <button class="bib" data-bib="icsca2021" aria-expanded="false">❝ Cite (BibTeX)</button> <a class="cert" href="certificates/icsca2021.pdf" target="_blank" rel="noopener">🏅 Certificate of publication</a></p>
     </div></div>
 
     <div class="pubgroup">Journal articles</div>
@@ -324,11 +396,13 @@
       <h3>Evaluation of Quality of Synthetic Megavolt Computed Tomography (MVCT) for Planning of Radiotherapy Treatments of Head and Neck</h3>
       <p class="au">M. Avanzo, A. Corso, <b>M. Rehman</b>, C. Micheloni, N. Martinel, R. Spizzo, et al.</p>
       <p class="ve">Physica Medica: European Journal of Medical Physics, vol. 142</p>
+      <p class="plinks"><button class="bib" data-bib="physmed2026" aria-expanded="false">❝ Cite (BibTeX)</button></p>
     </div></div>
     <div class="pub"><div class="yr">2025</div><div>
       <h3>Report on the Hands-On PhD Course on Responsible AI from the Lens of an Information Access Researcher</h3>
       <p class="au">D. Spina, K. Roitero, S. Mizzaro, V. Della Mea, F. Da Ros, M. Soprano, <b>M. Rehman</b>, et al.</p>
       <p class="ve">ACM SIGIR Forum, vol. 58, no. 2</p>
+      <p class="plinks"><button class="bib" data-bib="sigir2025" aria-expanded="false">❝ Cite (BibTeX)</button></p>
     </div></div>
 
     <div class="pubgroup">Under review</div>
@@ -391,9 +465,9 @@
       <div class="item"><div class="badge">🎤</div><div><b><a href="https://ictcs2026.uniud.it/" target="_blank" rel="noopener">ICTCS 2026</a> – 27th Italian Conference on Theoretical Computer Science</b><small>Udine, Italy · 7–9 Sep 2026</small></div></div>
       <div class="item"><div class="badge">☀️</div><div><b>RISE-MICCAI Summer School 2025</b><small>MICCAI Society · Jul 2025</small></div></div>
       <div class="item"><div class="badge">☀️</div><div><b>International Summer School on AI (AI-DLDA), 8th Edition</b><small>University of Udine · Jun 2025</small></div></div>
-      <div class="item"><div class="badge">☀️</div><div><b>International Computer Vision Summer School (ICVSS 2024)</b><small>University of Cambridge · Aug 2024</small></div></div>
+      <div class="item"><div class="badge">☀️</div><div><b>International Computer Vision Summer School (ICVSS 2024)</b><small>University of Cambridge · Aug 2024</small><a class="cbtn" href="certifications/icvss2024.pdf" target="_blank" rel="noopener">🏅 Certificate</a></div></div>
       <div class="item"><div class="badge">☀️</div><div><b>International Summer School on AI (AI-DLDA), 7th Edition</b><small>University of Udine · Jul 2024</small></div></div>
-      <div class="item"><div class="badge">☀️</div><div><b>Summer School for Humans and Technology: Technologies for Good</b><small>DAAD, Germany · Sep 2023</small></div></div>
+      <div class="item"><div class="badge">☀️</div><div><b>Summer School for Humans and Technology: Technologies for Good</b><small>DAAD, Germany · Sep 2023</small><a class="cbtn" href="certifications/daad2023.pdf" target="_blank" rel="noopener">🏅 Certificate</a></div></div>
     </div>
   </section>
 
@@ -403,6 +477,7 @@
       <div class="item"><div class="badge">🏅</div><div><b>PhD Fellowship</b><small>Fully funded by the Italian Ministry of Health, with the National Cancer Research Institute, CRO IRCCS · 2023</small></div></div>
       <div class="item"><div class="badge">🏅</div><div><b>Master's Scholarship</b><small>Tianjin University International Student Scholarship, for academic excellence · 2017</small></div></div>
       <div class="item"><div class="badge">🏅</div><div><b>Laptop Award</b><small>Prime Minister's Best Student Laptop Scheme, Government of Pakistan · 2015</small></div></div>
+      <div class="item"><div class="badge">📝</div><div><b>Peer reviewer</b><small><i>Pattern Recognition</i> (Elsevier journal) · ICIAP – International Conference on Image Analysis and Processing</small></div></div>
       <div class="item"><div class="badge">🤝</div><div><b>Member, CVPL (IAPR affiliate)</b><small>Italian Association for Research in Computer Vision, Pattern Recognition &amp; Machine Learning · 2025 – present</small></div></div>
     </div>
   </section>
@@ -415,6 +490,56 @@
       <div class="job minor"><div class="job-head"><h3>Intern</h3><span class="date">2015 – 2016</span></div><div class="co">Crevo Technologies <span>· Islamabad</span></div></div>
       <div class="job minor"><div class="job-head"><h3>Intern</h3><span class="date">2015</span></div><div class="co">Ministry of Defence Production, Directorate of Procurement (Navy) <span>· Rawalpindi</span></div></div>
     </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+
+    <div class="pubgroup" style="margin-top:0">Specializations</div>
+    <div class="specs">
+      <div class="spec">
+        <div class="spec-head"><div><b>Edgestone – A New Era: Training Program</b><small>METANOIA · Islamabad, Pakistan · 18 Apr – 28 May 2021<br>🏆 Top Presenter Award</small></div></div>
+        <div class="spec-btns"><a class="cbtn" href="certifications/edgestone-participation.jpg" target="_blank" rel="noopener">🏅 Certificate of participation</a><a class="cbtn" href="certifications/edgestone-top-presenter.jpg" target="_blank" rel="noopener">🏆 Top Presenter Award</a></div>
+      </div>
+      <div class="spec tall2">
+        <div class="spec-head"><div><b>Engineering Project Management – Specialization</b><small>Rice University · Coursera · Jun 2020<br>Credential ID 5ZAL4FGYD9HJ</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/specialization/certificate/5ZAL4FGYD9HJ" target="_blank" rel="noopener">Verify ↗</a></div>
+        <ul>
+          <li><span>Initiating and Planning <i>· Mar 2020</i></span><a href="https://www.coursera.org/account/accomplishments/verify/NQWNUYF94CQZ" target="_blank" rel="noopener">Verify ↗</a></li>
+          <li><span>Scope, Time and Cost Management <i>· Jun 2020</i></span><a href="https://www.coursera.org/account/accomplishments/certificate/ZVP59562L33X" target="_blank" rel="noopener">Verify ↗</a></li>
+          <li><span>Risk, Quality, Teams, and Procurement <i>· Jun 2020</i></span><a href="https://www.coursera.org/account/accomplishments/certificate/YAJ4EU6DALY3" target="_blank" rel="noopener">Verify ↗</a></li>
+        </ul>
+      </div>
+      <div class="spec">
+        <div class="spec-head"><div><b>Major Engineering Project Performance</b><small>University of Leeds · Coursera · Jul 2020<br>Credential ID ZKT8UBFZNHHF</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/ZKT8UBFZNHHF" target="_blank" rel="noopener">Verify ↗</a></div>
+      </div>
+    </div>
+
+    <div class="pubgroup">Courses &amp; certificates</div>
+    <div class="clist">
+      <div class="crow"><div><b>WordPress Course, DigiSkills Batch 8</b><small>DigiSkills.pk · Jan 2021<br>Credential ID US7KVWGPQ</small></div><a class="cbtn" href="https://digiskills.pk/verify/" target="_blank" rel="noopener">Verify ↗</a></div>
+      <div class="crow"><div><b>Freelancing Course, DigiSkills Batch 8</b><small>DigiSkills.pk · Jan 2021<br>Credential ID 2YCXAEEPQ</small></div><a class="cbtn" href="https://digiskills.pk/verify/" target="_blank" rel="noopener">Verify ↗</a></div>
+      <div class="crow"><div><b>Professional Scrum Master</b><small>Pakistan Software Export Board (PSEB) · Jul 2020</small></div><a class="cbtn" href="certifications/pseb2020.pdf" target="_blank" rel="noopener">🏅 Certificate</a></div>
+      <div class="crow"><div><b>Ufone Master Class: Career Path Management</b><small>Ufone 5G · Jul 2020</small></div></div>
+      <div class="crow"><div><b>Scrum: The Basics</b><small>LinkedIn Learning · Jun 2020</small></div><a class="cbtn" href="https://www.linkedin.com/learning/certificates/8edd667d82c50d6c12346e1d14355b84ba4f7176207a496f2d539a8fa203a813" target="_blank" rel="noopener">Verify ↗</a></div>
+      <div class="crow"><div><b>Photoshop 2020 Essential Training</b><small>LinkedIn Learning · Jun 2020<br>Credential ID AbX66qxUhMqA2Dez0F6wBux_rSk5</small></div><a class="cbtn" href="https://www.linkedin.com/learning/certificates/a90a17424b2d39b0681849870ab8f64403d14905b8c044d1ef73f6c513c9e3ae" target="_blank" rel="noopener">Verify ↗</a></div>
+      <div class="crow"><div><b>Positive Psychology</b><small>University of North Carolina at Chapel Hill · Coursera · Apr 2020<br>Credential ID G34KFTRQKXT2</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/certificate/G34KFTRQKXT2" target="_blank" rel="noopener">Verify ↗</a></div>
+      <div class="crow"><div><b>Chinese for Beginners</b><small>Peking University · Coursera · Apr 2020<br>Credential ID CYWDDN7A56JH</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/CYWDDN7A56JH" target="_blank" rel="noopener">Verify ↗</a></div>
+    </div>
+    <details class="news-more cmore"><summary>More</summary>
+    <div class="clist">
+      <div class="crow"><div><b>Project Management: The Basics for Success</b><small>University of California, Irvine · Coursera · Mar 2020<br>Credential ID VPFKJFUELMA7</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/VPFKJFUELMA7" target="_blank" rel="noopener">Verify ↗</a></div>
+      <div class="crow"><div><b>Women in Leadership: Inspiring Positive Change</b><small>Case Western Reserve University · Coursera · Mar 2020<br>Credential ID ZCCSRFSPDQYV</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/ZCCSRFSPDQYV" target="_blank" rel="noopener">Verify ↗</a></div>
+      <div class="crow"><div><b>Successful Negotiation: Essential Strategies and Skills</b><small>University of Michigan · Coursera · Mar 2020<br>Credential ID 6R4SK2U9QN68</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/6R4SK2U9QN68" target="_blank" rel="noopener">Verify ↗</a></div>
+      <div class="crow"><div><b>Managing Project Risks and Changes</b><small>University of California, Irvine · Coursera · Jan 2020<br>Credential ID 6D3464E3295V</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/6D3464E3295V" target="_blank" rel="noopener">Verify ↗</a></div>
+      <div class="crow"><div><b>Budgeting and Scheduling Projects</b><small>University of California, Irvine · Coursera · Jan 2020<br>Credential ID UMFW83286QQC</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/UMFW83286QQC" target="_blank" rel="noopener">Verify ↗</a></div>
+      <div class="crow"><div><b>Business Management Technology: IT Project Management</b><small>Indian School of Business · Coursera · Dec 2019<br>Credential ID UEHGWYAM9EVL</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/UEHGWYAM9EVL" target="_blank" rel="noopener">Verify ↗</a></div>
+      <div class="crow"><div><b>Initiating and Planning Projects</b><small>University of California, Irvine · Coursera · Dec 2019<br>Credential ID EV9AQK4M4E5M</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/EV9AQK4M4E5M" target="_blank" rel="noopener">Verify ↗</a></div>
+      <div class="crow"><div><b>Fundamentals of Project Planning and Management</b><small>University of Virginia · Coursera · Dec 2019<br>Credential ID LSTTEQVTA4LF</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/LSTTEQVTA4LF" target="_blank" rel="noopener">Verify ↗</a></div>
+      <div class="crow"><div><b>IEEE Pakistan Student / Young Professionals / Women in Engineering Congress – 9th Episode</b><small>IEEE Computer Society, COMSATS University Islamabad · Jul 2015</small></div></div>
+      <div class="crow"><div><b>CPD Workshop: “Future of Parallel Processing in IT Industry”</b><small>Fatima Jinnah Women University, Rawalpindi · Jan 2015</small></div></div>
+      <div class="crow"><div><b>CPD Workshop on XML Learning</b><small>Fatima Jinnah Women University, Rawalpindi · Jan 2014</small></div></div>
+    </div>
+    </details>
   </section>
 
   <section>
@@ -469,6 +594,82 @@
 
 <script>
 document.getElementById('y').textContent=new Date().getFullYear();
+
+/* ================= BIBTEX (Cite buttons) =================
+   One entry per paper. Edit here if any detail changes.
+========================================================== */
+const BIB = {
+icpr2026:`@inproceedings{rehman2026h3dmarnet,
+  title     = {H3D-MarNet: Wavelet-Guided Dual-Path Learning for Metal Artifact Suppression and CT Modality Transformation for Radiotherapy Workflows},
+  author    = {Rehman, Mubashara and Martinel, Niki and Avanzo, Michele and Spizzo, Riccardo and Micheloni, Christian},
+  booktitle = {Pattern Recognition -- ICPR 2026},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {16821},
+  publisher = {Springer},
+  year      = {2026},
+  eprint    = {2605.12252},
+  archivePrefix = {arXiv}
+}`,
+iciap2025:`@inproceedings{rehman2025remards,
+  title     = {ReMAR-DS: Recalibrated Feature Learning for Metal Artifact Reduction and CT Domain Transformation},
+  author    = {Rehman, Mubashara and Martinel, Niki and Avanzo, Michele and Spizzo, Riccardo and Micheloni, Christian},
+  booktitle = {Image Analysis and Processing -- ICIAP 2025},
+  series    = {Lecture Notes in Computer Science},
+  publisher = {Springer},
+  year      = {2025},
+  doi       = {10.1007/978-3-032-10192-1_18}
+}`,
+icpr2024:`@inproceedings{rehman2024mardtn,
+  title     = {MAR-DTN: Metal Artifact Reduction using Domain Transformation Network for Radiotherapy Planning},
+  author    = {Rehman, Mubashara and Martinel, Niki and Avanzo, Michele and Spizzo, Riccardo and Micheloni, Christian},
+  booktitle = {Pattern Recognition -- ICPR 2024},
+  series    = {Lecture Notes in Computer Science},
+  publisher = {Springer},
+  year      = {2024},
+  doi       = {10.1007/978-3-031-78195-7_10}
+}`,
+icsca2021:`@inproceedings{rehman2021opticalflow,
+  title     = {A Fast and Robust Embedded Optical Flow Unit on Motion Estimation},
+  author    = {Rehman, Mubashara and Own, Chung-Ming and Li, Ziqi},
+  booktitle = {Proceedings of the 2021 10th International Conference on Software and Computer Applications},
+  pages     = {180--185},
+  publisher = {ACM},
+  year      = {2021},
+  doi       = {10.1145/3457784.3457813}
+}`,
+physmed2026:`@article{avanzo2026syntheticmvct,
+  title   = {Evaluation of Quality of Synthetic Megavolt Computed Tomography (MVCT) for Planning of Radiotherapy Treatments of Head and Neck},
+  author  = {Avanzo, Michele and Corso, A. and Rehman, Mubashara and Micheloni, Christian and Martinel, Niki and Spizzo, Riccardo and others},
+  journal = {Physica Medica: European Journal of Medical Physics},
+  volume  = {142},
+  year    = {2026}
+}`,
+sigir2025:`@article{spina2025responsibleai,
+  title   = {Report on the Hands-On PhD Course on Responsible AI from the Lens of an Information Access Researcher},
+  author  = {Spina, Damiano and Roitero, Kevin and Mizzaro, Stefano and Della Mea, Vincenzo and Da Ros, Francesca and Soprano, Michael and Rehman, Mubashara and others},
+  journal = {ACM SIGIR Forum},
+  volume  = {58},
+  number  = {2},
+  year    = {2025}
+}`
+};
+document.querySelectorAll('button.bib').forEach(b=>{
+  b.onclick=()=>{
+    const row=b.closest('.plinks');
+    const open=row.nextElementSibling;
+    if(open && open.classList.contains('bibbox')){open.remove();b.setAttribute('aria-expanded','false');return}
+    const box=document.createElement('div'); box.className='bibbox';
+    const pre=document.createElement('pre'); pre.textContent=BIB[b.dataset.bib]||'';
+    const c=document.createElement('button'); c.className='copy'; c.textContent='Copy';
+    c.onclick=async()=>{
+      try{await navigator.clipboard.writeText(pre.textContent);c.textContent='Copied ✓'}
+      catch(e){const r=document.createRange();r.selectNodeContents(pre);
+        const sel=getSelection();sel.removeAllRanges();sel.addRange(r);c.textContent='Press Ctrl+C'}
+      setTimeout(()=>{c.textContent='Copy'},1800);
+    };
+    box.append(c,pre); row.after(box); b.setAttribute('aria-expanded','true');
+  };
+});
 
 /* ================= POSTER PRESENTATIONS =================
    To add pictures, put them in a folder called "posters" in your
