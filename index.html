@@ -172,8 +172,10 @@
   .spec.tall2{grid-row:span 2}
   .spec-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
   .spec-btns .cbtn{margin-top:0}
-  .cmore{margin-top:10px}
-  .cmore .clist{margin-top:8px}
+  .chead{display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .ctoggle{all:unset;cursor:pointer;font:600 12px Inter,sans-serif;text-transform:none;letter-spacing:0;color:var(--accent)}
+  .ctoggle:hover{text-decoration:underline}
+  .clist.collapsed .extra{display:none}
 
   .interests{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
   .int{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px}
@@ -514,32 +516,31 @@
       </div>
     </div>
 
-    <div class="pubgroup">Courses &amp; certificates</div>
-    <div class="clist">
+    <div class="pubgroup chead">Courses &amp; certificates <button class="ctoggle" id="cToggle" aria-expanded="true">Show less −</button></div>
+    <div class="clist" id="cList">
       <div class="crow"><div><b>WordPress Course, DigiSkills Batch 8</b><small>DigiSkills.pk · Jan 2021<br>Credential ID US7KVWGPQ</small></div><a class="cbtn" href="https://digiskills.pk/verify/" target="_blank" rel="noopener">Verify ↗</a></div>
       <div class="crow"><div><b>Freelancing Course, DigiSkills Batch 8</b><small>DigiSkills.pk · Jan 2021<br>Credential ID 2YCXAEEPQ</small></div><a class="cbtn" href="https://digiskills.pk/verify/" target="_blank" rel="noopener">Verify ↗</a></div>
       <div class="crow"><div><b>Professional Scrum Master</b><small>Pakistan Software Export Board (PSEB) · Jul 2020</small></div><a class="cbtn" href="certifications/pseb2020.pdf" target="_blank" rel="noopener">🏅 Certificate</a></div>
-      <div class="crow"><div><b>Ufone Master Class: Career Path Management</b><small>Ufone 5G · Jul 2020</small></div></div>
       <div class="crow"><div><b>Scrum: The Basics</b><small>LinkedIn Learning · Jun 2020</small></div><a class="cbtn" href="https://www.linkedin.com/learning/certificates/8edd667d82c50d6c12346e1d14355b84ba4f7176207a496f2d539a8fa203a813" target="_blank" rel="noopener">Verify ↗</a></div>
       <div class="crow"><div><b>Photoshop 2020 Essential Training</b><small>LinkedIn Learning · Jun 2020<br>Credential ID AbX66qxUhMqA2Dez0F6wBux_rSk5</small></div><a class="cbtn" href="https://www.linkedin.com/learning/certificates/a90a17424b2d39b0681849870ab8f64403d14905b8c044d1ef73f6c513c9e3ae" target="_blank" rel="noopener">Verify ↗</a></div>
       <div class="crow"><div><b>Positive Psychology</b><small>University of North Carolina at Chapel Hill · Coursera · Apr 2020<br>Credential ID G34KFTRQKXT2</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/certificate/G34KFTRQKXT2" target="_blank" rel="noopener">Verify ↗</a></div>
       <div class="crow"><div><b>Chinese for Beginners</b><small>Peking University · Coursera · Apr 2020<br>Credential ID CYWDDN7A56JH</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/CYWDDN7A56JH" target="_blank" rel="noopener">Verify ↗</a></div>
-    </div>
-    <details class="news-more cmore"><summary>More</summary>
-    <div class="clist">
       <div class="crow"><div><b>Project Management: The Basics for Success</b><small>University of California, Irvine · Coursera · Mar 2020<br>Credential ID VPFKJFUELMA7</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/VPFKJFUELMA7" target="_blank" rel="noopener">Verify ↗</a></div>
-      <div class="crow"><div><b>Women in Leadership: Inspiring Positive Change</b><small>Case Western Reserve University · Coursera · Mar 2020<br>Credential ID ZCCSRFSPDQYV</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/ZCCSRFSPDQYV" target="_blank" rel="noopener">Verify ↗</a></div>
-      <div class="crow"><div><b>Successful Negotiation: Essential Strategies and Skills</b><small>University of Michigan · Coursera · Mar 2020<br>Credential ID 6R4SK2U9QN68</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/6R4SK2U9QN68" target="_blank" rel="noopener">Verify ↗</a></div>
-      <div class="crow"><div><b>Managing Project Risks and Changes</b><small>University of California, Irvine · Coursera · Jan 2020<br>Credential ID 6D3464E3295V</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/6D3464E3295V" target="_blank" rel="noopener">Verify ↗</a></div>
-      <div class="crow"><div><b>Budgeting and Scheduling Projects</b><small>University of California, Irvine · Coursera · Jan 2020<br>Credential ID UMFW83286QQC</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/UMFW83286QQC" target="_blank" rel="noopener">Verify ↗</a></div>
-      <div class="crow"><div><b>Business Management Technology: IT Project Management</b><small>Indian School of Business · Coursera · Dec 2019<br>Credential ID UEHGWYAM9EVL</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/UEHGWYAM9EVL" target="_blank" rel="noopener">Verify ↗</a></div>
-      <div class="crow"><div><b>Initiating and Planning Projects</b><small>University of California, Irvine · Coursera · Dec 2019<br>Credential ID EV9AQK4M4E5M</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/EV9AQK4M4E5M" target="_blank" rel="noopener">Verify ↗</a></div>
-      <div class="crow"><div><b>Fundamentals of Project Planning and Management</b><small>University of Virginia · Coursera · Dec 2019<br>Credential ID LSTTEQVTA4LF</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/LSTTEQVTA4LF" target="_blank" rel="noopener">Verify ↗</a></div>
-      <div class="crow"><div><b>IEEE Pakistan Student / Young Professionals / Women in Engineering Congress – 9th Episode</b><small>IEEE Computer Society, COMSATS University Islamabad · Jul 2015</small></div></div>
-      <div class="crow"><div><b>CPD Workshop: “Future of Parallel Processing in IT Industry”</b><small>Fatima Jinnah Women University, Rawalpindi · Jan 2015</small></div></div>
-      <div class="crow"><div><b>CPD Workshop on XML Learning</b><small>Fatima Jinnah Women University, Rawalpindi · Jan 2014</small></div></div>
+      <div class="crow extra"><div><b>Women in Leadership: Inspiring Positive Change</b><small>Case Western Reserve University · Coursera · Mar 2020<br>Credential ID ZCCSRFSPDQYV</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/ZCCSRFSPDQYV" target="_blank" rel="noopener">Verify ↗</a></div>
+      <div class="crow extra"><div><b>Successful Negotiation: Essential Strategies and Skills</b><small>University of Michigan · Coursera · Mar 2020<br>Credential ID 6R4SK2U9QN68</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/6R4SK2U9QN68" target="_blank" rel="noopener">Verify ↗</a></div>
+      <div class="crow extra"><div><b>Managing Project Risks and Changes</b><small>University of California, Irvine · Coursera · Jan 2020<br>Credential ID 6D3464E3295V</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/6D3464E3295V" target="_blank" rel="noopener">Verify ↗</a></div>
+      <div class="crow extra"><div><b>Budgeting and Scheduling Projects</b><small>University of California, Irvine · Coursera · Jan 2020<br>Credential ID UMFW83286QQC</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/UMFW83286QQC" target="_blank" rel="noopener">Verify ↗</a></div>
+      <div class="crow extra"><div><b>Business Management Technology: IT Project Management</b><small>Indian School of Business · Coursera · Dec 2019<br>Credential ID UEHGWYAM9EVL</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/UEHGWYAM9EVL" target="_blank" rel="noopener">Verify ↗</a></div>
+      <div class="crow extra"><div><b>Initiating and Planning Projects</b><small>University of California, Irvine · Coursera · Dec 2019<br>Credential ID EV9AQK4M4E5M</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/EV9AQK4M4E5M" target="_blank" rel="noopener">Verify ↗</a></div>
+      <div class="crow extra"><div><b>Fundamentals of Project Planning and Management</b><small>University of Virginia · Coursera · Dec 2019<br>Credential ID LSTTEQVTA4LF</small></div><a class="cbtn" href="https://www.coursera.org/account/accomplishments/verify/LSTTEQVTA4LF" target="_blank" rel="noopener">Verify ↗</a></div>
+      <div class="crow extra"><div><b>Ufone Master Class: Career Path Management</b><small>Ufone 5G · Jul 2020</small></div></div>
+      <div class="crow extra"><div><b>Ufone Master Class: MS PowerPoint Essentials</b><small>Ufone 5G · Jul 2020</small></div></div>
+      <div class="crow extra"><div><b>Ufone Master Class: Microsoft Excel Essentials</b><small>Ufone 5G · Jul 2020</small></div></div>
+      <div class="crow extra"><div><b>Email Marketing Certified</b><small>HubSpot Academy · Jul 2020<br>Credential ID 0797555fb3a34798a7720ae79118bc52</small></div></div>
+      <div class="crow extra"><div><b>IEEE Pakistan Student / Young Professionals / Women in Engineering Congress – 9th Episode</b><small>IEEE Computer Society, COMSATS University Islamabad · Jul 2015</small></div></div>
+      <div class="crow extra"><div><b>CPD Workshop: “Future of Parallel Processing in IT Industry”</b><small>Fatima Jinnah Women University, Rawalpindi · Jan 2015</small></div></div>
+      <div class="crow extra"><div><b>CPD Workshop on XML Learning</b><small>Fatima Jinnah Women University, Rawalpindi · Jan 2014</small></div></div>
     </div>
-    </details>
   </section>
 
   <section>
@@ -594,6 +595,12 @@
 
 <script>
 document.getElementById('y').textContent=new Date().getFullYear();
+
+/* Courses & certificates: all shown; "Show less" hides the older ones */
+(()=>{const t=document.getElementById('cToggle'),l=document.getElementById('cList');
+  if(!t||!l)return;
+  t.onclick=()=>{const c=l.classList.toggle('collapsed');
+    t.textContent=c?'Show all +':'Show less −';t.setAttribute('aria-expanded',String(!c))};})();
 
 /* ================= BIBTEX (Cite buttons) =================
    One entry per paper. Edit here if any detail changes.
